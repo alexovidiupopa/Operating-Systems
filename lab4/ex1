@@ -1,0 +1,17 @@
+BEGIN{
+V=0
+C=0
+}
+
+$5 ~ /[a-zA-Z]*[aeiouAEIOU]\>/{
+	V++
+}
+
+$5 ~ /[a-zA-Z]*[^aeiouAEIOU]\>/{
+	C++
+}
+
+END{
+print V
+print C
+}
