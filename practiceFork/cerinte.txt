@@ -1,0 +1,28 @@
+1.Sa se creeze 2 programe c (p1, p2) care comunica prin shared memory. P1
+trimite un string prin shared memory lui p2. P2 numara cate vocale contine
+acel string apoi trimite prin shared memory rezultatul lui p1.
+
+2. Sa se scrie 2 programe c (p1, p2). P1 citeste numere de la tastatura
+pana cand se citeste un numar negativ, apoi p1 trimite lui p2 cate un
+numar pe rand, p2 verifica daca este prim si intoarce raspuns.
+Implementati o versiune cu pipe si una cu fifo.
+
+3. Sa se scrie un program c (P) care genereaza un numar random (NR) intre
+5000 si 10000, apoi creeaza un fiu (C). P ii trimite lui C numarul NR prin
+pipe. C scade din NR un numar random intre 900 si 1000 si ii trimite
+rezultatul lui P. P scade la randul lui un numar random intre 900 si 1000
+din NR si trimite rezultatul lui C. Fiecare proces va afisa un mesaj cu
+numarul primit si numarul trimis. Algoritmul se repeta pana cand unul din
+procese primeste un numar mai mic decat -10000, moment in care acel proces
+afiseaza un mesaj.
+
+4. Sa se scrie un program c (P) care primeste ca argumente la linia de
+comanda mai multe comenzi bash. Pentru fiecare comanda primita procesul P
+creeaza cate un fiu (A). Fiecare proces A creeaza la randul sau un proces
+B care incearca sa execute comanda cu exec. In caz de esec, procesul A
+trimite procesului P codul de eroare returnat de exec, in caz de succes
+procesul A trimite lui P codul 0. Se vor afisa doar codurile de eroare.
+
+5. Sa se scrie un program c care citeste o matrice de la tastatura.
+Folosind thread-uri, programul va calcula suma numerelor de pe fiecare
+coloana din matrice, un thread va calcula suma pe o singura coloana.
